@@ -53,7 +53,7 @@ html {
     /* outline: 2px solid #2196f3;*/
 }
 
-.btn, .hero-btn, .modal-btn-close {
+.btn, .hero-btn, .modal-btn-close, button {
     cursor: pointer;
 }
 
@@ -587,10 +587,12 @@ html {
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; 
+    
+    padding: 40px;
 }
 
 .backdrop.is-hidden {
-    /*visibility: ;*/
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
@@ -605,7 +607,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -614,6 +616,56 @@ html {
 }
 .icon-modal-close {
     fill: #000000;
+}
+.modal-btn-close:hover .icon-modal-close {
+    fill: var(--accent-color);
+}
+
+.modal-txt {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px; 
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.modal-list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.modal-btn-submit {
+    width: 200px;
+    height: 50px;  
+    padding: 10px 55px 10px 56px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    
+    color: var(--primary-white-color);
+   
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+.modal-btn-submit:hover,
+.modal-btn-submit:focus {
+    background-color: var(--hero-btn-hf-color);
 }
 
 .filter-list {

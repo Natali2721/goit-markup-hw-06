@@ -381,8 +381,37 @@
                     <use href="./images/icons.svg#icon-close-back"></use>
                 </svg>
             </button>
+            <b class="modal-txt">Оставьте свои данные, мы вам перезвоним</b>
+
+            <form class="user-contact-form">
+                <ul class="list modal-list">
+                    <li class="modal-list-item">
+                        <label for="name">Имя</label>
+                        <input type="text" name="user-name" id="name" />
+                    </li>
+                    <li class="modal-list-item">
+                        <label for="tel">Телефон</label>
+                        <input type="tel" name="user-tel" id="tel" />
+                    </li>
+                    <li class="modal-list-item">
+                        <label for="mail">Почта</label>
+                        <input type="email" name="user-mail" id="mail" />
+                    </li>
+                    <li class="modal-list-item">
+                        <label for="comment">Комментарий</label>
+                        <textarea name="comment" id="comment" ></textarea>
+                    </li>
+                </ul>
+                
+                
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                
+                <button class="modal-btn-submit" type="submit">Отправить</button>
+            </form>
+            
         </div>
     </div>
     <script src="./js/modal.js"></script>
 </body>
-</html>
+</html> 
