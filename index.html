@@ -373,11 +373,12 @@
             <form class="subscribe-form">
                 <b class="subscribe-text">Подпишитесь на рассылку</b>
                 <div class="subscription-field">
-                    <input class="subscribe-input" type="email" name="subscribtion" placeholder=" " id="subscribe_mail" />
-                    <label class="subscribe-label" for="subscribe_mail">E-mail</label>
+                    <label class="subscribe-label-hidden" for="subscribe_mail">E-mail</label>
+                    <input class="subscribe-input" type="email" name="subscribtion" placeholder="E-mail" id="subscribe_mail" />
+                    
                     <button class="subscription-btn" type="submit"><span class="subscription-btn-txt">Подписаться</span>
                         <svg class="btn-icon" width="24" height="24">
-                            <use href="./images/icons1.svg#icon-send"></use>
+                            <use href="./images/icons.svg#icon-send"></use>
                         </svg>
                     </button>
                 </div>
@@ -390,34 +391,37 @@
         <div class="modal">
             <button class="modal-btn-close" data-modal-close type="button">
                 <svg class="icon-modal-close" width="14" height="14">
-                    <use href="./images/icons.svg#icon-close-back"></use>
+                    <use href="./images/icons.svg#icon-modal-close"></use>
                 </svg>
             </button>
-            <b class="modal-txt">Оставьте свои данные, мы вам перезвоним</b>
 
             <form class="user-contact-form">
+                <b class="modal-txt">Оставьте свои данные, мы вам перезвоним</b>
                 <ul class="list modal-list">
                     <li class="modal-list-item">
-                        <label for="name">Имя</label>
-                        <input type="text" name="user-name" id="name" />
+                        <label class="modal-label" for="name">Имя</label>
+                        <input class="modal-input" type="text" name="user-name" id="name" />
+                    </li>
+                    <li class="modal-list-item ">
+                        <label class="modal-label" for="tel">Телефон</label>
+                        <input class="modal-input" type="tel" name="user-tel" id="tel" />
                     </li>
                     <li class="modal-list-item">
-                        <label for="tel">Телефон</label>
-                        <input type="tel" name="user-tel" id="tel" />
+                        <label class="modal-label" for="mail">Почта</label>
+                        <input class="modal-input" type="email" name="user-mail" id="mail" />
                     </li>
                     <li class="modal-list-item">
-                        <label for="mail">Почта</label>
-                        <input type="email" name="user-mail" id="mail" />
-                    </li>
-                    <li class="modal-list-item">
-                        <label for="comment">Комментарий</label>
-                        <textarea name="comment" id="comment" ></textarea>
+                        <label class="modal-label" for="comment">Комментарий</label>
+                        <textarea class="comment-area" name="comment" id="comment" placeholder="Введите текст" ></textarea>
                     </li>
                 </ul>
                 
-                
                 <input type="checkbox" name="agree" id="agree">
-                <label for="agree">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                <label class="modal-label-agree" for="agree">Соглашаюсь с рассылкой и принимаю 
+                    <span>
+                        <a class="modal-link" href="" target="_blank" rel="noopener noreferrer">Условия договора</a>
+                    </span>
+                </label>
                 
                 <button class="modal-btn-submit" type="submit">Отправить</button>
             </form>
