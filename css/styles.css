@@ -795,6 +795,7 @@ html {
     display: inline-block;
     width: 16px;
     height: 15px;
+    background-repeat: no-repeat;
     background-image: url(../images/icons-origin.svg/check-box-frame.svg);
     margin-right: 7px;
     transition: background-image var(--duration) var(--timing-function), border-radius var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function);
