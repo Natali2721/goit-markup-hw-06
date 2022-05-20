@@ -686,6 +686,7 @@ html {
     border-radius: 4px; 
     
     padding: 40px;
+    cursor: pointer;
 }
 
 .backdrop.is-hidden {
@@ -737,18 +738,31 @@ html {
     flex-direction: column;
     
 }
+
 .modal-label {
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
+    cursor: pointer;
 }
 .modal-input {
+    width: 448px;
     margin-bottom: 10px;
     outline: transparent;
     padding: 12px 16px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    cursor: pointer;
+}
+.input-area {
+    position: relative;
+}
+.modal-icon {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    fill: var(--title-text-color);
 }
 
 .modal-input:hover,
@@ -757,6 +771,14 @@ html {
 .comment-area:focus {
     border-color: var(--accent-color);
 }
+
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+    fill: var(--accent-color);
+
+}
+
+
 .comment-area {
     resize: none;
     height: 120px;
@@ -766,10 +788,14 @@ html {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-
+    line-height: 1.14;
+    
+    color: var(--title-text-color);
+    cursor: pointer;
+}
+::placeholder {
     color: rgba(117, 117, 117, 0.5);
+    letter-spacing: 0.01em;
 }
 .modal-label-agree {
     display: inline-block;
@@ -884,7 +910,7 @@ html {
     background: rgba(33, 150, 243, 0.9);
     opacity: 0;
 
-    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function); 
+    transition: transform var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function); 
 }
 
 .project-link:hover .poster-hover-overlay,
