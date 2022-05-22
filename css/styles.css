@@ -708,6 +708,10 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    margin-bottom: 10px;
+}
+.modal-list-item:last-child {
+    margin-bottom: 20px;
 }
 .modal-label {
     margin-bottom: 4px;
@@ -719,7 +723,7 @@ html {
 .modal-input {
     width: 448px;
     height: 40px;
-    margin-bottom: 10px;
+    
     outline: transparent;
     padding: 12px 16px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -746,7 +750,7 @@ html {
     resize: none;
     height: 120px;
     padding: 12px 16px;
-    margin-bottom: 20px;
+    
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -768,18 +772,20 @@ html {
     border-color: var(--accent-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.modal-label-agree {
-    display: block;
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.71;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 .agree-wrap {
     display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
 }
-.checkbox {
+.modal-label-agree {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;   
+}
+.checkbox-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -808,7 +814,7 @@ html {
     background-size: contain;
     border-radius: 2px;
 }
-.modal-link {
+.agree-link {
     color: var(--accent-color);
 }
 .modal-btn-submit {
@@ -822,7 +828,7 @@ html {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    
+    border: transparent;
     color: var(--primary-white-color);
    
     font-weight: 700;
